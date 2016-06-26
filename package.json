@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-starter-kit",
-  "version": "3.0.0-alpha.0",
-  "description": "Get started with React, Redux, and React-Router!",
+  "name": "Cargo transport web frontend",
+  "version": "0.1.0",
+  "description": "on demand cargo transport",
   "main": "index.js",
   "engines": {
     "node": ">=4.2.0",
@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "compile": "better-npm-run compile",
-    "lint": "eslint src tests server",
+    "lint": "eslint src server",
     "lint:fix": "npm run lint -- --fix",
     "start": "better-npm-run start",
     "dev": "better-npm-run dev",
@@ -131,6 +131,7 @@
     "codecov": "^1.0.1",
     "enzyme": "^2.0.0",
     "eslint": "^2.4.0",
+    "eslint-config-airbnb": "^9.0.1",
     "eslint-config-standard": "^5.1.0",
     "eslint-config-standard-react": "^2.2.0",
     "eslint-plugin-babel": "^3.2.0",

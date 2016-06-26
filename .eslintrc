@@ -1,14 +1,11 @@
 {
-  "parser"  : "babel-eslint",
-  "extends" : [
-    "standard",
-    "standard-react"
-  ],
-  "plugins": [
-    "babel"
-  ],
-  "env"     : {
-    "browser" : true
+  "parser": "babel-eslint",
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "mocha": true,
+    "node": true
   },
   "globals" : {
     "__DEV__"      : false,
@@ -18,9 +15,38 @@
     "__BASENAME__" : false
   },
   "rules": {
-    "semi" : [2, "never"],
-    "max-len": [2, 120, 2],
-    "generator-star-spacing": 0,
-    "babel/generator-star-spacing": 1
-  }
+    // disable requiring trailing commas because it might be nice to revert to
+    // being JSON at some point, and I don't want to make big changes now.
+    "comma-dangle": 0,
+    "indent": [2, 2, { "SwitchCase": 0 }],
+    "no-param-reassign": [2, { "props": false }],
+
+    // Ruls which apply for ES6 and React.
+    "no-var": 2,
+    "arrow-body-style": 0,
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 2,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 2,
+    "react/jsx-indent-props": 0,
+    "react/prop-types": 2,
+    "react/self-closing-comp": 2,
+    "react/wrap-multilines": 2,
+    "strict": [2, "global"],
+    "react/react-in-jsx-scope": 2,
+
+    //Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
+    "block-scoped-var": 0,
+    // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
+    "padded-blocks": 0
+  },
+  "plugins": [
+    "react"
+  ]
 }

@@ -16,7 +16,6 @@ const SIGNUP_SUCCESS = 'auth/SIGNUP_SUCCESS';
 const SIGNUP_FAILURE = 'auth/SIGNUP_FAILURE';
 
 
-
 export const initialState = {
   loading: false,
   error: false,
@@ -158,5 +157,4 @@ export function signup(router) {
     // }
   };
 }
-
 

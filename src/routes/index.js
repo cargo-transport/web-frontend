@@ -1,6 +1,6 @@
-import CoreLayout from '../layouts/CoreLayout/CoreLayout'
-import Home from './Home'
-import CounterRoute from './Counter'
+import CoreLayout from '../layouts/CoreLayout/CoreLayout';
+import Home from './Home';
+import CounterRoute from './Counter';
 // import Auth from './Auth';
 import bindHooks from './hooks';
 import store from '../redux/store';

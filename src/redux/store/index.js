@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, createStore } from 'redux'
+import { applyMiddleware, compose, createStore } from 'redux';
 import rootReducer from '../modules';
 import initialState from './initialState';
 import middleware from '../middleware';
@@ -6,11 +6,11 @@ import middleware from '../middleware';
 // ======================================================
 // Store Enhancers
 // ======================================================
-const enhancers = []
+const enhancers = [];
 if (__DEBUG__) {
-  const devToolsExtension = window.devToolsExtension
+  const devToolsExtension = window.devToolsExtension;
   if (typeof devToolsExtension === 'function') {
-    enhancers.push(devToolsExtension())
+    enhancers.push(devToolsExtension());
   }
 }
 
@@ -24,12 +24,12 @@ const store = createStore(
     applyMiddleware(...middleware),
     ...enhancers
   )
-)
+);
 
 if (module.hot) {
   module.hot.accept('../modules', () => {
-    store.replaceReducer(require('../modules').default)
-  })
+    store.replaceReducer(rootReducer);
+  });
 }
 
 export default store;
