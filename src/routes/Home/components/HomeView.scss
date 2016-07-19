@@ -3,3 +3,22 @@
   width: 120px;
   margin: 1.5rem auto;
 }
+
+.map {
+  height: 200px;
+  width: 100%;
+}
+
+.source {
+  /*width: 200px;*/
+}
+
+.destination {
+  flex-grow: 1;
+}
+
+.searchBox {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}

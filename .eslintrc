@@ -13,6 +13,7 @@
     "__DEBUG__"    : false,
     "__COVERAGE__" : false,
     "__BASENAME__" : false
+    "google"       : false
   },
   "rules": {
     // disable requiring trailing commas because it might be nice to revert to
@@ -44,7 +45,9 @@
     //Temporarirly disabled due to a possible bug in babel-eslint (todomvc example)
     "block-scoped-var": 0,
     // Temporarily disabled for test/* until babel/babel-eslint#33 is resolved
-    "padded-blocks": 0
+    "padded-blocks": 0,
+    "new-cap": ["error", { "capIsNew": false }],
+    "no-underscore-dangle": 0
   },
   "plugins": [
     "react"
